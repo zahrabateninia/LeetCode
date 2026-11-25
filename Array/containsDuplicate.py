@@ -10,3 +10,16 @@ def containsDuplicate(nums: list[int]) -> bool:
     return False
 
 # space complexity: O(n)
+
+# More efficient solution: Using a set:
+def containsDuplicateSet(nums: list[int]) -> bool:
+    seen = set()
+
+    for num in nums:
+        if num in seen:
+            return True
+
+        seen.add(num)
+
+    return False
+
