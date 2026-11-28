@@ -8,4 +8,15 @@ def missingNumber(nums: list[int]) -> int:
     actualSum = sum(nums)
 
     return expectedSum - actualSum
-    
+
+#  XOR
+def missingNumberXOR(nums):
+    result = len(nums)
+    for i, num in enumerate(nums):
+        result ^= i ^ num
+
+    return result
+
+# a ^ a = 0
+# a ^ 0 = a
+# a ^ b ^ a = b
